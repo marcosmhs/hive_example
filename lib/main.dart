@@ -116,19 +116,12 @@ class _HiveExampleState extends State<HiveExample> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Hive Example',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Hive Example'),
           actions: [
-            ElevatedButton.icon(
-              onPressed: () async {
-                await controller.removeBox();
-                refreshPersonList();
-              },
-              label: const Text('Remove Box'),
-              icon: const Icon(Icons.clear_all),
-            ),
             ElevatedButton.icon(
               onPressed: () => refreshPersonList(),
               label: const Text('Refresh'),

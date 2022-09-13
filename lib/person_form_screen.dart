@@ -65,7 +65,7 @@ class _PersonFormScreen extends State<PersonFormScreen> {
     _personContactPhoneNumberController.text = _localPerson.contactInfo?.phoneNumber ?? '';
 
     return Scaffold(
-      appBar: AppBar(title: const Text('New Person')),
+      appBar: AppBar(title: Text(_localPerson.id.isNotEmpty ? 'Edit Person' : 'New Person')),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),

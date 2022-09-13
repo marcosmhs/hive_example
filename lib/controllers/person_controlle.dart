@@ -53,7 +53,8 @@ class PersonController {
   Future<String> _update({required Person person}) async {
     await _prepareHiveBox();
     try {
-      // because the person.id is already saved the put command will replace the existing data
+      // because the person.id is already saved the put command will 
+      // replace the existing data
       await _personBox.put(person.id, person);
       //if (_personBox.isOpen) await _personBox.close();
     } catch (e) {
@@ -83,7 +84,8 @@ class PersonController {
   Future<List<Person>> loadEntryTypeList() async {
     List<Person> result = [];
     await _prepareHiveBox();
-    // values function return all data stored on the Box. By using <Person> the method will return a typed list.
+    // values function return all data stored on the Box. 
+    // By using <Person> the method will return a typed list.
     for (var item in _personBox.values) {
       result.add(item);
     }
